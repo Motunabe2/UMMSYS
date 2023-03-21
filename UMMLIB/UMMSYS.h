@@ -11,20 +11,20 @@
  ****************************************************************************/
 
 
-  /* å¤šé‡å®šç¾©é˜²æ­¢					*/
+  /* ‘½d’è‹`–h~					*/
   /* Prevention of redefinition	*/
 #pragma once
 
 /***************************************************************************
- *      ãƒã‚¯ãƒ­å®šæ•°å®£è¨€
+ *      ƒ}ƒNƒ’è”éŒ¾
  *      Macro
  ***************************************************************************/
 #define MAX_SCENE_NUM 256
-#define SCREEN_SIZE_H 480
-#define SCREEN_SIZE_W 640
+#define SCREEN_SIZE_H 640
+#define SCREEN_SIZE_W 480
 
  /***************************************************************************
-  *      ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
+  *      ƒCƒ“ƒNƒ‹[ƒh
   *      include
   ***************************************************************************/
 #include "DxLib.h"
@@ -36,17 +36,23 @@ class SceneProgramer;
 class UMMSYS
 {
 public:
-	UMMSYS();//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
-	~UMMSYS();//ãƒ‡ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	UMMSYS();//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	~UMMSYS();//ƒfƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	int DrawBlank();
+	int Loading_Start();
+	int Loading_End();
 
+
+	
 private:
 	int BOOT();
 	int window_size_H;
 	int window_size_W;
 
 	unsigned short scene_status;
-	//ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿
-	SceneProgramer* ScenePP;//ã‚·ãƒ¼ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ
+	//ƒV[ƒ“ƒ|ƒCƒ“ƒ^
+	SceneProgramer* ScenePP;//ƒV[ƒ“ƒvƒƒOƒ‰ƒ}
+
 };
 
 #define SCENE_Sample 0
@@ -54,14 +60,13 @@ private:
 class SceneProgramer
 {
 public:
-	SceneProgramer();//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
-	int SceneExec(int tick);//ã‚·ãƒ¼ãƒ³ã®å®Ÿè¡Œ
+	SceneProgramer();//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	int SceneExec(int tick);//ƒV[ƒ“‚ÌÀs
 	int SceneChange(int CheneNum);
-  
 private:
 	int RunningScene;
 	int SceneID;
 
-	//ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿å®£è¨€
+	//ƒV[ƒ“ƒ|ƒCƒ“ƒ^éŒ¾
 	Scene_Sample* Sample;
 };
