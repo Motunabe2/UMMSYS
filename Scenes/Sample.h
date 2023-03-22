@@ -4,7 +4,6 @@
 #include "DxLib.h"
 #include "UMMGGC.h"
 #include "UMMUI.h"
-#include "UMMADX.h"
 
 class Scene_Sample : public MonoLisic
 {
