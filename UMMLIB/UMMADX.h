@@ -1,20 +1,20 @@
-//ŽQl
+//å‚è€ƒ
 /*
-https://w.atwiki.jp/soundtasukeai/pages/33.html#id_573b6636
+https://w.atwiki.jp/soundtasukeai/pages/33.html
 https://game.criware.jp/manual/native/adx2/latest/index.html
 */
-/* ‘½d’è‹`–hŽ~					*/
+/* å¤šé‡å®šç¾©é˜²æ­¢					*/
 /* Prevention of redefinition	*/
 #pragma once
 
 
-/* CRI SDK ƒwƒbƒ_[ */
+/* CRI SDK ãƒ˜ãƒƒãƒ€ãƒ¼ */
 #include <cri_le_xpt.h>
 
-/* CRI ADX2 ƒwƒbƒ_[ */
+/* CRI ADX2 ãƒ˜ãƒƒãƒ€ãƒ¼ */
 #include <cri_le_atom_ex.h>
 #include <cri_le_atom_wasapi.h>
-/*Dxƒ‰ƒCƒuƒ‰ƒŠ ƒwƒbƒ_[*/
+/*Dxãƒ©ã‚¤ãƒ–ãƒ©ãƒª ãƒ˜ãƒƒãƒ€ãƒ¼*/
 #include "DxLib.h"
 
 //#define ACF_FILE "assets/Sound/Public/UMMTEST.acf"
@@ -33,14 +33,14 @@ public:
 
 	CriAtomExPlayerHn PlayerHL;
 private:
-	/* ƒGƒ‰[ƒR[ƒ‹ƒoƒbƒNŠÖ” */
+	/* ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•° */
 	static void UserErrorCallbackFunc(const CriChar8* errid, CriUint32 p1, CriUint32 p2, CriUint32* parray)
 	{
 		const CriChar8* ErrMsg;
 
-		/* ƒGƒ‰[•¶Žš—ñ‚Ì•\Ž¦ */
+		/* ã‚¨ãƒ©ãƒ¼æ–‡å­—åˆ—ã®è¡¨ç¤º */
 		ErrMsg = criErr_ConvertIdToMessage(errid, p1, p2);
-		printfDx("ADX2 ƒGƒ‰[ : %s\n", ErrMsg);
+		printfDx("ADX2 ã‚¨ãƒ©ãƒ¼ : %s\n", ErrMsg);
 	}
 
 	static void* UserAllocationFunc(void* obj, CriUint32 size)
@@ -69,7 +69,7 @@ private:
 	char EmptyPoint;
 	int ReSerchEP();
 	char default_CueSheet[256];
-	bool Allocate[256];//true‚Å‚ ‚ê‚ÎŽg—p’†@false‚Å‚ ‚ê‚Î–¢Žg—p
+	bool Allocate[256];//trueã§ã‚ã‚Œã°ä½¿ç”¨ä¸­ã€€falseã§ã‚ã‚Œã°æœªä½¿ç”¨
 	ADXSoundPlayer* SoundPlayerPointer[256];
 };
 
