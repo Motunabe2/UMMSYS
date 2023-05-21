@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ *
  *
  * Library  : UMMSYS
  * Module   : System Body
@@ -11,24 +11,24 @@
  ****************************************************************************/
 
  /***************************************************************************
-  *      ƒCƒ“ƒNƒ‹[ƒh
+  *      ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
   *      include
   ***************************************************************************/
 #include "UMMLIB.h"
 
-UMMSYS :: UMMSYS()//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+UMMSYS :: UMMSYS()//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 {
-	//ƒEƒBƒ“ƒhƒEƒTƒCƒYİ’è
+	//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºè¨­å®š
 	window_size_H = 480;
 	window_size_W = 640;
 
-	//ƒV[ƒ“§Œä
+	//ã‚·ãƒ¼ãƒ³åˆ¶å¾¡
 	ScenePP = new SceneProgramer;
-	//ƒtƒHƒ“ƒgİ’è
+	//ãƒ•ã‚©ãƒ³ãƒˆè¨­å®š
 
 	BOOT();
 }
-UMMSYS :: ~UMMSYS()//ƒfƒRƒ“ƒXƒgƒ‰ƒNƒ^
+UMMSYS :: ~UMMSYS()//ãƒ‡ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 {
 
 }
@@ -40,7 +40,7 @@ int UMMSYS::BOOT()
 	WaitTimer(30);
 		FL = ScenePP->SceneExec(1);
 	}
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 
@@ -48,7 +48,7 @@ int UMMSYS::BOOT()
 
 //SceneProgramer
 SceneProgramer :: SceneProgramer()
-{//ƒV[ƒ“ƒ|ƒCƒ“ƒ^‚Ì‰Šú‰»ˆ—
+{//ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿ã®åˆæœŸåŒ–å‡¦ç†
 	SceneID = SCENE_Sample;
 	RunningScene = SCENE_Sample;
 	Sample = new Scene_Sample;
@@ -77,5 +77,5 @@ int SceneProgramer::SceneExec(int tick)
 	case SCENE_Sample:SceneID = Sample->Scene_exec();
 		break;
 	}
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
