@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ *
  *
  * Library  : UMMLIB
  * Module   : InputOutput
@@ -10,7 +10,7 @@
  *
  ****************************************************************************/
 
- /* ‘½d’è‹`–h~					*/
+ /* å¤šé‡å®šç¾©é˜²æ­¢					*/
  /* Prevention of redefinition	*/
 #pragma once
 
@@ -28,7 +28,7 @@ public:
 	bool GetMouseButtonUp(int Button);
 
 private:
-	//ˆÈ‰ºprivate‚Å‰B‚·
+	//ä»¥ä¸‹privateã§éš ã™
 	int wk;
 	bool ret;
 	bool ButtonToggle;
