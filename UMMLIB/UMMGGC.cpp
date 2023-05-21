@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ * 
  *
  * Library  : UMMLIB
  * Module   : Generic Game Components
@@ -11,7 +11,7 @@
  ****************************************************************************/
 
  /***************************************************************************
-  *      ƒCƒ“ƒNƒ‹[ƒh
+  *      ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
   *      include
   ***************************************************************************/
 #include "UMMGGC.h"
@@ -25,58 +25,58 @@ int MonoLithic :: Execute()
 		StartFL = false;
 	}
 	else { retVal = Update(); }
-	Components();//ƒRƒ“ƒ|[ƒlƒ“ƒgÀs
-	return retVal;//³íI—¹
+	Components();//ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆå®Ÿè¡Œ
+	return retVal;//æ­£å¸¸çµ‚äº†
 }
 
 int MonoLithic::Constructer()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int MonoLithic::Start()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int MonoLithic::Update()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int MonoLithic::Components()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 
 int BoxCollider2D :: Start()
 {
 	
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int BoxCollider2D::Update()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 
 int Vector2 :: Start()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int Vector2::Update()
 {
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 
@@ -106,25 +106,25 @@ int WindowAbyss :: Update()
 #if USE_DXLib
 int Sprite::Start()
 {
-	X = 0;//‰¡ˆÊ’u‰Šú‰»
-	Y = 0;//cˆÊ’u‰Šú‰»
-	Display = false;//‰Šúó‘Ô‚Å‚Í•\¦‚µ‚È‚¢
+	X = 0;//æ¨ªä½ç½®åˆæœŸåŒ–
+	Y = 0;//ç¸¦ä½ç½®åˆæœŸåŒ–
+	Display = false;//åˆæœŸçŠ¶æ…‹ã§ã¯è¡¨ç¤ºã—ãªã„
 	
-	GHL = LoadGraph(FName);//‰æ‘œ‚Ì“Ç‚İ‚İ
+	GHL = LoadGraph(FName);//ç”»åƒã®èª­ã¿è¾¼ã¿
 
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int Sprite :: Draw()
 {
 	
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 int Sprite::FileName(const char FN[256])
 {
 	//*FName = FN;
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 
 
@@ -140,7 +140,7 @@ int AssetManager :: LoadAsset(const char FileName[],int FileType)
 		work = LoadSoundMem(FileName);
 		
 	}
-	else { return -10;/*ƒGƒ‰[ : ƒtƒ@ƒCƒ‹ƒ^ƒCƒv‘I‘ğ‚ªŠÔˆá‚Á‚Ä‚¢‚é*/ }
+	else { return -10;/*ã‚¨ãƒ©ãƒ¼ : ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—é¸æŠãŒé–“é•ã£ã¦ã„ã‚‹*/ }
 }
 
 int AssetManager::Serch_No_UseHList()
