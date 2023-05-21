@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ * 
  *
  * Library  : UMMLIB
  * Module   : User Interface
@@ -11,7 +11,7 @@
  ****************************************************************************/
 
 /***************************************************************************
- *      ƒCƒ“ƒNƒ‹[ƒh
+ *      ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
  *      include
  ***************************************************************************/
 #include "UMMUI.h"
@@ -19,20 +19,20 @@
 
 int GetFonthandle()
 {
-	// ‚c‚wƒtƒHƒ“ƒgƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İAƒtƒHƒ“ƒgƒnƒ“ƒhƒ‹‚ğ•Ï” FontHandle ‚É•Û‘¶‚·‚é
+	// ï¼¤ï¼¸ãƒ•ã‚©ãƒ³ãƒˆãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã€ãƒ•ã‚©ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ«ã‚’å¤‰æ•° FontHandle ã«ä¿å­˜ã™ã‚‹
 	return LoadFontDataToHandle("assets/Fonts/wanpakuruika07.dft", 0);
 }
 
-//ƒEƒBƒ“ƒhƒEŠÖ˜A
+//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦é–¢é€£
 ummwindow::ummwindow()
 {
 	graph_barHL = LoadGraph("assets/UI/window_upper.png");
 	bar = 20;
 }
-int ummwindow::Draw_window()//3ms‚©‚ç8msˆÊ‚Ìˆ—ŠÔ
+int ummwindow::Draw_window()//3msã‹ã‚‰8msä½ã®å‡¦ç†æ™‚é–“
 {
-	DrawBox(window_point_X - 1, window_point_Y - 1, window_point_X + window_size_W + 1, window_point_Y + window_size_H + 1, GetColor(10, 10, 10), TRUE);//ƒEƒBƒ“ƒhƒE‰º’n‚Ì•`Ê
-	DrawBox(window_point_X, window_point_Y, window_point_X + window_size_W, window_point_Y + window_size_H, GetColor(200, 200, 200), TRUE);//ƒEƒBƒ“ƒhƒEƒ{ƒbƒNƒX•\¦‚Ì•`Ê
+	DrawBox(window_point_X - 1, window_point_Y - 1, window_point_X + window_size_W + 1, window_point_Y + window_size_H + 1, GetColor(10, 10, 10), TRUE);//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ä¸‹åœ°ã®æå†™
+	DrawBox(window_point_X, window_point_Y, window_point_X + window_size_W, window_point_Y + window_size_H, GetColor(200, 200, 200), TRUE);//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒœãƒƒã‚¯ã‚¹è¡¨ç¤ºã®æå†™
 
 	for (int cnt1 = window_point_X; cnt1 < window_point_X + window_size_W; cnt1++) { DrawGraph(cnt1, window_point_Y, graph_barHL, TRUE); }
 
@@ -51,19 +51,19 @@ int ummwindow::Print_tex(int x, int y, const char tex[256], int R, int G, int B)
 }
 int ummwindow::Get_permission_area()
 {
-	this ->perm_area_XS = window_point_X;					//‰¡n‚ğ‹‚ß‚é®
-	this->perm_area_XE = window_point_X + window_size_W;	//‰¡I‚ğ‹‚ß‚é®
+	this ->perm_area_XS = window_point_X;					//æ¨ªå§‹ã‚’æ±‚ã‚ã‚‹å¼
+	this->perm_area_XE = window_point_X + window_size_W;	//æ¨ªçµ‚ã‚’æ±‚ã‚ã‚‹å¼
 
-	this->perm_area_YS = window_point_Y + bar;			//cn‚ğ‹‚ß‚é®
-	this->perm_area_YE = window_point_Y + window_size_H;	//cI‚ğ‹‚ß‚é®
+	this->perm_area_YS = window_point_Y + bar;			//ç¸¦å§‹ã‚’æ±‚ã‚ã‚‹å¼
+	this->perm_area_YE = window_point_Y + window_size_H;	//ç¸¦çµ‚ã‚’æ±‚ã‚ã‚‹å¼
 	return 0;
 }
 int ummwindow::DrawBoxUmm(int xs, int ys, int xe, int ye, unsigned int color, bool flg)
 {
-	//if (perm_area_XS > perm_area_XS + xe) { printfDx("•`Ê”ÍˆÍŠO‚Å‚· XS\n"); }
-	//if (perm_area_YS > perm_area_YS + ye) { printfDx("•`Ê”ÍˆÍŠO‚Å‚· YS\n"); }
-	//if (perm_area_XE < perm_area_XS + xe) { printfDx("•`Ê”ÍˆÍŠO‚Å‚· XE\n"); }
-	//if (perm_area_YE < perm_area_YS + ye) { printfDx("•`Ê”ÍˆÍŠO‚Å‚· YE\n"); }
+	//if (perm_area_XS > perm_area_XS + xe) { printfDx("æå†™ç¯„å›²å¤–ã§ã™ XS\n"); }
+	//if (perm_area_YS > perm_area_YS + ye) { printfDx("æå†™ç¯„å›²å¤–ã§ã™ YS\n"); }
+	//if (perm_area_XE < perm_area_XS + xe) { printfDx("æå†™ç¯„å›²å¤–ã§ã™ XE\n"); }
+	//if (perm_area_YE < perm_area_YS + ye) { printfDx("æå†™ç¯„å›²å¤–ã§ã™ YE\n"); }
 
 	DrawBox(perm_area_XS + xs, perm_area_YS + ys, perm_area_XS + xe, perm_area_YS + ye - bar, color, flg);
 	return 0;
@@ -94,13 +94,13 @@ int ummwindow::CrearWindow()
 int ummButton::SetButtonPicture(bool Trans)
 {
 	int A = 0;
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 int ummButton::SetButtonSize(int Height, int Wide)
 {
 	Size_Height = Height;
 	Size_Wide = Wide;
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 int ummButton::SetButtonPosition(int X, int Y)
 {
@@ -108,13 +108,13 @@ int ummButton::SetButtonPosition(int X, int Y)
 	PositionYS = Y;
 	PositionXE = X + Size_Wide;
 	PositionYE = Y + Size_Height;
-	return 0;//³íI—¹
+	return 0;//æ­£å¸¸çµ‚äº†
 }
 bool ummButton::GetButtonDown(int Button)
 {
 	retnum = GetMouseInputLog2(&ButtonInf, &ClickPointX, &ClickPointY, &LogType, true);
 	DrawBox(PositionXS, PositionYS, PositionXE, PositionYE, GetColor(255, 255, 0), false);
-	if (retnum == 0)//—š—ğ‚ªæ“¾‚Å‚«‚½
+	if (retnum == 0)//å±¥æ­´ãŒå–å¾—ã§ããŸ
 	{
 		if (ButtonInf == Button)
 		{
@@ -132,7 +132,7 @@ bool ummButton::GetButtonDown(int Button)
 			}
 		}
 	}
-	else if (retnum == -1)//—š—ğ‚ª–³‚¢
+	else if (retnum == -1)//å±¥æ­´ãŒç„¡ã„
 	{
 		DrawLine(PositionXS, PositionYS, PositionXE, PositionYE, GetColor(0, 255, 0));
 		retb = false;
@@ -143,7 +143,7 @@ bool ummButton::GetButtonUp(int Button)
 {
 	retnum = GetMouseInputLog2(&ButtonInf, &ClickPointX, &ClickPointY, &LogType, true);
 	DrawBox(PositionXS, PositionYS, PositionXE, PositionYE, GetColor(255, 255, 0), false);
-	if (retnum == 0)//—š—ğ‚ªæ“¾‚Å‚«‚½
+	if (retnum == 0)//å±¥æ­´ãŒå–å¾—ã§ããŸ
 	{
 		if (ButtonInf == Button)
 		{
@@ -161,7 +161,7 @@ bool ummButton::GetButtonUp(int Button)
 			}
 		}
 	}
-	else if (retnum == -1)//—š—ğ‚ª–³‚¢
+	else if (retnum == -1)//å±¥æ­´ãŒç„¡ã„
 	{
 		DrawLine(PositionXS, PositionYS, PositionXE, PositionYE, GetColor(0, 255, 0));
 		retb = false;
