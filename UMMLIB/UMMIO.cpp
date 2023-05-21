@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ * 
  *
  * Library  : UMMLIB
  * Module   : InputOutput
