@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ * 
  *
  * Library  : UMMLIB
  * Module   : System Body
@@ -11,12 +11,12 @@
  ****************************************************************************/
 
 
-  /* ‘½d’è‹`–h~					*/
+  /* å¤šé‡å®šç¾©é˜²æ­¢					*/
   /* Prevention of redefinition	*/
 #pragma once
 
 /***************************************************************************
- *      ƒ}ƒNƒ’è”éŒ¾
+ *      ãƒã‚¯ãƒ­å®šæ•°å®£è¨€
  *      Macro
  ***************************************************************************/
 #define MAX_SCENE_NUM 256
@@ -24,7 +24,7 @@
 #define SCREEN_SIZE_W 480
 
  /***************************************************************************
-  *      ƒCƒ“ƒNƒ‹[ƒh
+  *      ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
   *      include
   ***************************************************************************/
 #include "DxLib.h"
@@ -36,8 +36,8 @@ class SceneProgramer;
 class UMMSYS
 {
 public:
-	UMMSYS();//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	~UMMSYS();//ƒfƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	UMMSYS();//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	~UMMSYS();//ãƒ‡ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	int DrawBlank();
 	int Loading_Start();
 	int Loading_End();
@@ -50,8 +50,8 @@ private:
 	int window_size_W;
 
 	unsigned short scene_status;
-	//ƒV[ƒ“ƒ|ƒCƒ“ƒ^
-	SceneProgramer* ScenePP;//ƒV[ƒ“ƒvƒƒOƒ‰ƒ}
+	//ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿
+	SceneProgramer* ScenePP;//ã‚·ãƒ¼ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ
 
 };
 
@@ -60,13 +60,13 @@ private:
 class SceneProgramer
 {
 public:
-	SceneProgramer();//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	int SceneExec(int tick);//ƒV[ƒ“‚ÌÀs
+	SceneProgramer();//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	int SceneExec(int tick);//ã‚·ãƒ¼ãƒ³ã®å®Ÿè¡Œ
 	int SceneChange(int CheneNum);
 private:
 	int RunningScene;
 	int SceneID;
 
-	//ƒV[ƒ“ƒ|ƒCƒ“ƒ^éŒ¾
+	//ã‚·ãƒ¼ãƒ³ãƒã‚¤ãƒ³ã‚¿å®£è¨€
 	Scene_Sample* Sample;
 };
