@@ -2,7 +2,7 @@
  *
  * UMMSYStem
  *
- * Copyright (c) Motunabe2
+ *
  *
  * Library  : UMMLIB
  * Module   : User Interface
@@ -11,12 +11,12 @@
  ****************************************************************************/
 
 
-/* ‘½d’è‹`–h~					*/
+/* å¤šé‡å®šç¾©é˜²æ­¢					*/
 /* Prevention of redefinition	*/
 #pragma once
 
 /***************************************************************************
- *      ƒ}ƒNƒ’è”éŒ¾
+ *      ãƒã‚¯ãƒ­å®šæ•°å®£è¨€
  *      Macro
  ***************************************************************************/
 
@@ -39,29 +39,29 @@ class ummwindow
 public:
 	ummwindow(void);
 
-	int perm_area_XS;//•`Ê‹–‰ÂƒXƒy[ƒX@‰¡n
-	int perm_area_YS;//•`Ê‹–‰ÂƒXƒy[ƒX@cn
-	int perm_area_XE;//•`Ê‹–‰ÂƒXƒy[ƒX@‰¡I
-	int perm_area_YE;//•`Ê‹–‰ÂƒXƒy[ƒX@cI
+	int perm_area_XS;//æå†™è¨±å¯ã‚¹ãƒšãƒ¼ã‚¹ã€€æ¨ªå§‹
+	int perm_area_YS;//æå†™è¨±å¯ã‚¹ãƒšãƒ¼ã‚¹ã€€ç¸¦å§‹
+	int perm_area_XE;//æå†™è¨±å¯ã‚¹ãƒšãƒ¼ã‚¹ã€€æ¨ªçµ‚
+	int perm_area_YE;//æå†™è¨±å¯ã‚¹ãƒšãƒ¼ã‚¹ã€€ç¸¦çµ‚
 
-	int window_point_Y;//ƒEƒBƒ“ƒhƒEˆÊ’u@c
-	int window_point_X;//ƒEƒBƒ“ƒhƒEˆÊ’u@‰¡
+	int window_point_Y;//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ä½ç½®ã€€ç¸¦
+	int window_point_X;//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ä½ç½®ã€€æ¨ª
 
-	int window_size_H;//ƒEƒBƒ“ƒhƒEƒTƒCƒY@c
-	int window_size_W;//ƒEƒBƒ“ƒhƒEƒTƒCƒY@‰¡
+	int window_size_H;//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºã€€ç¸¦
+	int window_size_W;//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºã€€æ¨ª
 
-	int bar;//ƒ^ƒCƒgƒ‹ƒo[@•
+	int bar;//ã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ã€€å¹…
 
 	int graph_barHL;
 
-	int Draw_window();//ƒEƒBƒ“ƒhƒE‚ğ•`Ê
-	int Bar_text(const char tex[256]);//ƒ^ƒCƒgƒ‹ƒeƒLƒXƒg‚ğ•\¦
-	int Print_tex(int X, int Y, const char tex[256], int R, int G, int B);//ƒeƒLƒXƒg‚ğ•\¦
-	int Print_str(int X, int Y, const char tex[512], int BetLine, bool derec, unsigned int Color);//•¶š—ñ‚ğ•\¦
-	int Print_char(int X, int Y, char Char, unsigned int Color);//•¶š‚ğ•\¦
-	int Print_dec(int X, int Y, int dec, unsigned int Color);//”’l‚ğ•\¦
-	int Get_permission_area();//•`Ê‹–‰Â‚ğæ“¾
-	int DrawBoxUmm(int xs, int ys, int xe, int ye, unsigned int color, bool flg);//lŠpŒ`‚ğ•`Ê
+	int Draw_window();//ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’æå†™
+	int Bar_text(const char tex[256]);//ã‚¿ã‚¤ãƒˆãƒ«ãƒ†ã‚­ã‚¹ãƒˆã‚’è¡¨ç¤º
+	int Print_tex(int X, int Y, const char tex[256], int R, int G, int B);//ãƒ†ã‚­ã‚¹ãƒˆã‚’è¡¨ç¤º
+	int Print_str(int X, int Y, const char tex[512], int BetLine, bool derec, unsigned int Color);//æ–‡å­—åˆ—ã‚’è¡¨ç¤º
+	int Print_char(int X, int Y, char Char, unsigned int Color);//æ–‡å­—ã‚’è¡¨ç¤º
+	int Print_dec(int X, int Y, int dec, unsigned int Color);//æ•°å€¤ã‚’è¡¨ç¤º
+	int Get_permission_area();//æå†™è¨±å¯ã‚’å–å¾—
+	int DrawBoxUmm(int xs, int ys, int xe, int ye, unsigned int color, bool flg);//å››è§’å½¢ã‚’æå†™
 	int CrearWindow();
 };
 
@@ -70,23 +70,23 @@ int GetFonthandle();
 class ummButton
 {
 public:
-	int FH;//ƒtƒHƒ“ƒgƒnƒ“ƒhƒ‹
-	int SetButtonPosition(int X, int Y);//ƒ{ƒ^ƒ“ˆÊ’uİ’è
-	int SetButtonSize(int Height, int Wide);//ƒ{ƒ^ƒ“ƒTƒCƒYİ’è
-	int SetButtonPicture(bool Trans = true);//ƒ{ƒ^ƒ“‰æ‘œİ’è
+	int FH;//ãƒ•ã‚©ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ«
+	int SetButtonPosition(int X, int Y);//ãƒœã‚¿ãƒ³ä½ç½®è¨­å®š
+	int SetButtonSize(int Height, int Wide);//ãƒœã‚¿ãƒ³ã‚µã‚¤ã‚ºè¨­å®š
+	int SetButtonPicture(bool Trans = true);//ãƒœã‚¿ãƒ³ç”»åƒè¨­å®š
 	bool GetButtonDown(int Button);
 	bool GetButtonUp(int Button);
 private:
-	int PositionXS;//ƒ{ƒ^ƒ“‰¡nÀ•W
-	int PositionYS;//ƒ{ƒ^ƒ“cnÀ•W
-	int PositionXE;//ƒ{ƒ^ƒ“‰¡IÀ•W
-	int PositionYE;//ƒ{ƒ^ƒ“cIÀ•W
+	int PositionXS;//ãƒœã‚¿ãƒ³æ¨ªå§‹åº§æ¨™
+	int PositionYS;//ãƒœã‚¿ãƒ³ç¸¦å§‹åº§æ¨™
+	int PositionXE;//ãƒœã‚¿ãƒ³æ¨ªçµ‚åº§æ¨™
+	int PositionYE;//ãƒœã‚¿ãƒ³ç¸¦çµ‚åº§æ¨™
 
-	int Size_Height;//ƒ{ƒ^ƒ“‚‚³
-	int Size_Wide;//ƒ{ƒ^ƒ“‰¡•
+	int Size_Height;//ãƒœã‚¿ãƒ³é«˜ã•
+	int Size_Wide;//ãƒœã‚¿ãƒ³æ¨ªå¹…
 
 
-	int retnum;//GetMouseInputLog2‚Ì–ß‚è’l‚ğŠi”[
+	int retnum;//GetMouseInputLog2ã®æˆ»ã‚Šå€¤ã‚’æ ¼ç´
 	bool retb;
 	int ButtonInf;
 	int ClickPointX, ClickPointY;
